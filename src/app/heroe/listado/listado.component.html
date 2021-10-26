@@ -1,0 +1,38 @@
+<p>  lista de maricas </p>
+
+
+<div *ngIf="heroeBorrado; else noBorrado">
+    <h3>Marica en el lobby: <small>{{heroeBorrado}}</small> </h3>
+    
+    </div>
+
+ <ng-template #noBorrado>
+ 
+        <h3>No hay ningun marica en el looby</h3>
+        
+  </ng-template>
+    
+    
+    <button (click)="borrarHeroe()">
+        borra a un marica
+    
+    </button>
+    
+
+<ul>
+    <li *ngFor= "let heroes of heroes; let i=index">
+        {{i}} - {{heroes}}
+
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
